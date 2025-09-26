@@ -52,8 +52,12 @@ document.addEventListener("keydown", (Event) => {
             display.value = "Error";
         }
     }
-    else if (event.key === "Backspace") {
+    else if (Event.key === "Backspace") {
         currentInput = currentInput.slice(0, -1);
+        updateDisplay();
+    }
+    else if (Event.key === "Escape") {
+        currentInput = "";
         updateDisplay();
     }
 })
